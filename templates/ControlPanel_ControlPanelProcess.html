@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Referências dos CSS para desktop -->
+  <link rel="stylesheet" href="{{ static_url }}css/ControlPanel_ControlPanelProcess_style.css">
+  <link rel="stylesheet" href="{{ static_url }}css/ControlPanel_ControlPanelProcess_vars.css">
+  <title>Control Panel</title>
+</head>
+<body>
+
+  <div class="control-panel-process">
+    <img class="back" src="{{ static_url }}/img/back0.svg" />
+    <div class="navbar">
+      <div class="icons">
+        <img class="notification" src="{{ static_url }}/img/notification0.svg" />
+      </div>
+      <div class="frame-27">
+        <div class="kruluz-utsman">Kruluz Utsman</div>
+      </div>
+      <div class="frame-82">
+        <div class="hello-kruluz-utsman">Hello Kruluz Utsman</div>
+        <div class="_4-45-pm-19-jan-2022">4.45 pm 19 Jan 2022</div>
+      </div>
+      <img class="rectangle-338" src="{{ static_url }}/img/rectangle-3380.png" />
+    </div>
+    <img class="rectangle-10" src="{{ static_url }}/img/rectangle-100.svg" />
+    <div class="frame-logo">
+      <div class="frame-55">
+        <img class="rectangle-337" src="{{ static_url }}/img/rectangle-3370.png" />
+        <div class="media-cuts-studio">Media Cuts Studio</div>
+      </div>
+      <div class="line-2"></div>
+    </div>
+    <div class="frame-side-bar">
+      <div class="side-menu-dashboard">
+        <img class="element-4" src="{{ static_url }}/img/element-40.svg" />
+        <div class="icons2"></div>
+        <div class="dashboard">Dashboard</div>
+      </div>
+      <div class="side-menu-control-panel">
+        <div class="menu-icon">
+          <img class="mask" src="{{ static_url }}/img/mask0.svg" />
+          <div class="color"></div>
+        </div>
+        <img class="setting" src="{{ static_url }}/img/setting0.svg" />
+        <div class="control-panel">Control Panel</div>
+      </div>
+      <div class="side-menu-control-panel-process">
+        <img class="setting2" src="{{ static_url }}/img/setting1.svg" />
+        <div class="control-panel">Control Panel Process</div>
+      </div>
+      <div class="side-menu-my-account">
+        <div class="icons2"></div>
+        <div class="menu-icon2">
+          <img class="mask2" src="{{ static_url }}/img/mask1.svg" />
+          <img class="mask3" src="{{ static_url }}/img/mask2.svg" />
+          <div class="color"></div>
+        </div>
+        <div class="my-account">my account</div>
+      </div>
+    </div>
+    <div class="group-11056">
+      <div class="rectangle-21"></div>
+      <div class="thread-id" id="thread-id">Thread id:</div>
+      <div class="cuts-duration" id="cuts-duration">Cuts Duration:</div>
+      <div class="target" id="target">Target:</div>
+      <div class="file-path" id="file-path">File path:</div>
+      <div class="created-at" id="created-at">Created at:</div>
+      <div class="mediabase" id="mediabase">Mediabase:</div>
+      <div class="weather-forecast" id="weather-forecast">Weather Forecast:</div>
+    </div>
+
+    <div class="frame-47667">
+      <div class="log"><textarea id="log" readonly style=" background: transparent; width: 397px; height: 557px;"></textarea></div>
+      <div class="progress"> <progress id="progress" value="0" max="100"></progress></div>
+      <div class="time-counter" id="time-counter">00:00:00</div>
+      <div class="progress-create" id="progress-create">Progress Create:</div>
+    </div>
+  </div>
+  
+<!-- Socket.IO e Script de Funcionalidades -->
+<script src="https://cdn.socket.io/4.6.1/socket.io.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Conexão com o servidor Socket.IO (ajuste a URL conforme necessário)
+  const socket = io('http://localhost:300');
+
+  // Referências aos elementos que serão atualizados
+  const logEl = document.getElementById('log');
+  const progressEl = document.getElementById('progress');
+  const threadIdEl = document.getElementById('thread-id');
+  const createdAtEl = document.getElementById('created-at');
+  const filePathEl = document.getElementById('file-path');
+  const mediabaseEl = document.getElementById('mediabase');
+  const targetEl = document.getElementById('target');
+  const cutsDurationEl = document.getElementById('cuts-duration');
+  const timeCounterEl = document.getElementById('time-counter');
+
+  // API Key usada na comunicação via Socket.IO
+  const API_KEY = "apikey-content-creator";
+
+  // Evento de conexão
+  socket.on('connect', () => {
+    appendLog("✅ Connected to the server #1 API Media Cuts Studio");
+  });
+
+  // Evento de desconexão
+  socket.on('disconnect', () => {
+    appendLog("❌ Disconnected from server #1 API Media Cuts Studio");
+  });
+
+  // Evento para receber dados (ex: webhook_data)
+  socket.on('webhook_data', (data) => {
+    console.log("Dados recebidos:", data);
+    const userReceived = data[API_KEY];
+    if (!userReceived) return;
+    
+    const msgType = userReceived.type;
+    const message = userReceived.message || "Mensagem não encontrada";
+    
+    switch (msgType) {
+      case "info":
+        appendLog(message);
+        break;
+      case "progress":
+        progressEl.value = parseInt(message, 10);
+        break;
+      case "target":
+        targetEl.textContent = "Target: " + message;
+        break;
+      case "mediabase":
+        mediabaseEl.textContent = "Mediabase: " + message;
+        break;
+      case "Thread":
+        threadIdEl.textContent = "Thread id: " + message;
+        break;
+      case "Createdat":
+        createdAtEl.textContent = "Created at: " + message;
+        break;
+      default:
+        appendLog("Tipo desconhecido: " + msgType);
+    }
+  });
+
+  // Função para acrescentar mensagens na área de logs
+  function appendLog(text) {
+    logEl.value += text + "\n";
+    logEl.scrollTop = logEl.scrollHeight;
+  }
+
+  // Cronômetro (simula o QTimeEdit incrementando a cada segundo)
+  let seconds = 0;
+  function updateTimer() {
+    seconds++;
+    const hrs = Math.floor(seconds / 3600);
+    const mins = Math.floor((seconds % 3600) / 60);
+    const secs = seconds % 60;
+    timeCounterEl.textContent = 
+      (hrs < 10 ? "0" + hrs : hrs) + ":" +
+      (mins < 10 ? "0" + mins : mins) + ":" +
+      (secs < 10 ? "0" + secs : secs);
+  }
+  setInterval(updateTimer, 1000);
+
+  // Exemplo de chamada à API (simula uma requisição similar à versão antiga)
+  fetch("http://127.0.0.1:5000/api/Media_Cuts_Studio/1_long_video", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-API-KEY": API_KEY
+    },
+    body: JSON.stringify({
+      chave1: "valor1",
+      chave2: "valor2"
+    })
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log("Resposta da API:", data);
+  })
+  .catch(error => {
+    console.error("Erro na API:", error);
+  });
+
+});
+</script>
+</body>
+</html>
