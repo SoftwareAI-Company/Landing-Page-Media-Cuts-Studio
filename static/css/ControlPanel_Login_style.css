@@ -1,0 +1,203 @@
+
+.login,
+.login * {
+  box-sizing: border-box;
+}
+.login {
+  background: #eff3fd;
+  height: 1108px;
+  position: relative;
+  overflow: hidden;
+}
+.back {
+  opacity: 0.7;
+  height: auto;
+  position: absolute;
+  left: -319.41px;
+  top: -65px;
+  overflow: visible;
+}
+.frame-62 {
+  background: var(--colors-primary-white, #ffffff);
+  border-radius: 16px;
+  padding: 72px 0px 72px 0px;
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 1029px;
+  height: 773px;
+  position: absolute;
+  left: 91px;
+  top: 168px;
+  overflow: hidden;
+}
+.frame-11056 {
+  border-style: solid;
+  border-color: rgba(26, 30, 41, 0.12);
+  border-width: 0px 0px 0px 1px;
+  padding: 0px 32px 0px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  width: 500px;
+  position: relative;
+}
+
+.frame-55 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 260px;
+  height: 108px;
+  position: relative;
+}
+.rectangle-337 {
+  border-radius: 11.65px;
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  position: relative;
+  object-fit: cover;
+}
+.media-cuts-studio {
+  color: var(--stroke-2nd, #1a1e29);
+  text-align: left;
+  font-family: "ABeeZee-Regular", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.016em;
+  font-weight: 400;
+  position: relative;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 328px;
+  height: 78px;
+  position: relative;
+}
+.xodimlar {
+  color: var(--primary-dark-500, #343c44);
+  text-align: left;
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  position: relative;
+  align-self: stretch;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Estilo quando o mouse passa por cima */
+#loginButton:hover {
+  background-color: #2980b9;
+  cursor: pointer;
+}
+
+.custom-input {
+  background: #ffffff;
+  border-radius: 6px;
+  border-style: solid;
+  border-color: #d6e4ec;
+  border-width: 1px;
+  padding: 8px 16px 8px 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 328px;
+  height: 40px;
+  position: relative;
+}
+.text {
+  color: #aabbc6;
+  text-align: left;
+  font-family: "Poppins-Light", sans-serif;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.25px;
+  font-weight: 300;
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.input2 {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.frame-1 {
+  background: #5a55d2;
+  border-radius: 6px;
+  padding: 8px 32px 8px 32px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 328px;
+  position: relative;
+  overflow: hidden;
+}
+.label {
+  color: var(--primary-light-300, #fbfbfb);
+  text-align: center;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.25px;
+  font-weight: 400;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.frame-110562 {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  width: 500px;
+  position: relative;
+}
+.artboard-113-wf-automation-illustrations-1 {
+  flex-shrink: 0;
+  width: 409.06px;
+  height: 456px;
+  position: relative;
+  overflow: hidden;
+}
+.group {
+  height: auto;
+  position: absolute;
+  left: 49.52px;
+  top: 29.02px;
+  overflow: visible;
+}
