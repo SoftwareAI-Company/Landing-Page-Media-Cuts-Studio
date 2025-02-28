@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Referências dos CSS para desktop -->
+  <link rel="stylesheet" href="{{ static_url }}css/ControlPanel_style.css">
+  <link rel="stylesheet" href="{{ static_url }}css/ControlPanel_vars.css">
+  <title>Control Panel</title>
+</head>
+<body>
+
+  <div class="monitoring">
+    <img class="back" src="{{ static_url }}img/back0.svg" />
+    <img class="rectangle-104" src="{{ static_url }}img/rectangle-1040.svg" />
+    <div class="file">
+      <div class="frame-11056"></div>
+      <div class="download-cuts">Download Cuts</div>
+      <div class="iconly-light-download">
+        <img class="downlaod" src="{{ static_url }}img/downlaod0.svg" />
+      </div>
+    </div>
+    <!-- Área Dropável -->
+    <div class="group-10967" id="drop-area">
+      <!-- Imagens e elementos visuais -->
+      <img class="rectangle-1032" src="{{ static_url }}img/rectangle-1031.svg" />
+      <img class="group-11012" src="{{ static_url }}img/group-110120.svg" />
+      <img class="rectangle-159-stroke" src="{{ static_url }}img/rectangle-159-stroke0.svg" />
+      
+      <!-- Nome do vídeo -->
+      <div id="video-title" class="video-title"></div>
+  
+      <!-- Vídeo que servirá como capa -->
+      <video id="video-preview" class="video-preview" muted></video>
+      
+      <!-- Campo de input invisível -->
+      <input type="file" id="file-input" style="display: none;" accept="video/*" />
+    </div>
+    <div class="navbar">
+      <div class="icons">
+        <img class="notification" src="{{ static_url }}img/notification0.svg" />
+      </div>
+      <div class="frame-27">
+        <div class="kruluz-utsman">Kruluz Utsman</div>
+        <img class="rectangle-338" src="{{ static_url }}img/rectangle-3380.png" />
+      </div>
+      <div class="frame-82">
+        <div class="hello-kruluz-utsman">Hello Kruluz Utsman</div>
+        <div class="_4-45-pm-19-jan-2022">4.45 pm 19 Jan 2022</div>
+      </div>
+    </div>
+    <img class="rectangle-10" src="{{ static_url }}img/rectangle-100.svg" />
+    <div class="frame-83">
+      <div class="frame-55">
+        <img class="rectangle-337" src="{{ static_url }}img/rectangle-3370.png" />
+        <div class="media-cuts-studio">Media Cuts Studio</div>
+      </div>
+      <div class="line-2"></div>
+    </div>
+    <div class="frame-42">
+      <div class="side-menu">
+        <div class="icons2"></div>
+        <div class="dashboard">Dashboard</div>
+      </div>
+      <img class="element-4" src="{{ static_url }}img/element-40.svg" />
+      <div class="side-menu">
+        <div class="icons2"></div>
+        <div class="control-panel">Control Panel</div>
+        <div class="ellipse-53"></div>
+      </div>
+      <div class="side-menu">
+        <div class="menu-icon">
+          <img class="mask" src="{{ static_url }}img/mask0.svg" />
+          <img class="mask2" src="{{ static_url }}img/mask1.svg" />
+          <div class="color"></div>
+        </div>
+        <div class="control-panel-process">Control Panel Process</div>
+      </div>
+      <div class="side-menu2">
+        <div class="menu-icon">
+          <img class="mask" src="{{ static_url }}img/mask0.svg" />
+          <img class="mask2" src="{{ static_url }}img/mask1.svg" />
+          <div class="color"></div>
+        </div>
+        <div class="my-account">my account</div>
+      </div>
+      <img class="setting" src="{{ static_url }}img/setting0.svg" />
+
+    </div>
+    <div class="frame-439">
+      <div class="group-11018">
+        <!-- Combo box para seleção de resolução -->
+        <div class="select-default">
+          <select id="resolution-selector" name="resolution">
+            <option value="360x640">360x640</option>
+            <option value="480x854">480x854</option>
+            <option value="540x960">540x960</option>
+            <option value="720x1280">720x1280</option>
+            <option value="1080x1920">1080x1920</option>
+          </select>
+          <img class="icon-fill-chevron-down" src="{{ static_url }}img/icon-fill-chevron-down0.svg" alt="Seta para baixo" />
+        </div>
+        <div class="select-resolution">Select Resolution</div>
+      </div>
+    </div>
+    <div class="frame-47666">
+      <div class="frame-308">
+        <div class="focusing-on-digital">Title:</div>
+        <div class="focusing-on-digital2">Your title goes here</div>
+      </div>
+      <div class="frame-3082">
+        <div class="focusing-on-digital3">Number of possible cuts:</div>
+        <div class="focusing-on-digital4">0</div>
+      </div>
+      <div class="frame-371">
+        <div class="frame-4392">
+          <div class="focusing-on-digital5">Font</div>
+          <div class="frame-467">
+            <div class="secondary">
+              <select id="font-selector" name="font-selector">
+                <option value="Futura" selected>Futura</option>
+                <option value="Arial">Arial</option>
+                <option value="Helvetica">Helvetica</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Courier New">Courier New</option>
+                <option value="DejaVu Sans">DejaVu Sans</option>
+                <option value="DejaVu Serif">DejaVu Serif</option>
+                <option value="Liberation Sans">Liberation Sans</option>
+              </select>
+            </div>
+          
+            <div class="secondary2">
+              <div class="rectangle-699"></div>
+              <div class="confirm-copy-22">B</div>
+            </div>
+            <div class="secondary3">
+              <div class="rectangle-699"></div>
+              <div class="confirm-copy-23">I</div>
+            </div>
+          </div>
+        </div>
+        <div class="frame-435">
+          <div class="background-colour">
+            <div class="frame-432">
+              <div class="focusing-on-digital6">Color Subtitles</div>
+              <div class="button-secondary">
+                <div class="confirm-copy-24">#292D8E</div>
+                <div class="ellipse-19"></div>
+              </div>
+            </div>
+          </div>
+          <div class="background-colour">
+            <div class="frame-432">
+              <div class="focusing-on-digital7">Color Title</div>
+              <div class="button-secondary">
+                <div class="confirm-copy-24">#333333</div>
+                <div class="ellipse-192"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="frame-441">
+          <div class="focusing-on-digital7">Subtitles Alignment</div>
+          <div class="frame-4672">
+            <div class="frame-478">
+              <img
+                class="align-horizontal-left"
+                src="{{ static_url }}img/align-horizontal-left0.svg"
+              />
+            </div>
+            <div class="frame-480">
+              <img
+                class="align-horizontal-center"
+                src="{{ static_url }}img/align-horizontal-center0.svg"
+              />
+            </div>
+            <div class="frame-479">
+              <img
+                class="align-horizontal-right"
+                src="{{ static_url }}img/align-horizontal-right0.svg"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="frame-310">
+          <div class="focusing-on-digital7">Image Watermark:</div>
+          <div class="frame-430">
+            <div class="button-secondary2">
+              <div class="confirm-copy-24">Upload</div>
+            </div>
+          </div>
+        </div>
+        <div class="frame-438">
+          <div class="frame-442">
+            <div class="focusing-on-digital7">Text Watermark:</div>
+            <div class="focusing-on-digital8">@jupitrr_audio</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="frame-47665">
+      <div class="rectangle-3"></div>
+      <div class="frame-1">
+        <div class="button-dark-mode">
+          <img class="backward-5-seconds" src="{{ static_url }}img/backward-5-seconds0.svg" />
+        </div>
+        <div class="button-dark-mode">
+          <img class="play" src="{{ static_url }}img/play0.svg" />
+        </div>
+        <div class="button-dark-mode">
+          <img class="forward-5-seconds" src="{{ static_url }}img/forward-5-seconds0.svg" />
+        </div>
+      </div>
+      <div class="button-dark-mode2"></div>
+      <div class="preview-realtime-cuts">Preview Realtime Cuts</div>
+    </div>
+  </div>
+  
+  <script src="{{ static_url }}js/control_panel/control-panel-draggable-area.js"></script>
+  <script src="{{ static_url }}js/control_panel/control-panel-color-picker.js"></script>
+
+
+</body>
+
+
