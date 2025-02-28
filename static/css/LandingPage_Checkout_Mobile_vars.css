@@ -1,0 +1,79 @@
+/* Figma Styles of your File */
+:root {
+  /* Colors */
+  --black-000000: #000000;
+  --black-900-1a1a1a: #1a1a1a;
+  --black-800-333333: #333333;
+  --black-700-4d4d4d: #4d4d4d;
+  --black-600-666666: #666666;
+  --black-500-808080: #808080;
+  --black-400-999999: #999999;
+  --black-300-b3b3b3: #b3b3b3;
+  --black-200-cccccc: #cccccc;
+  --black-100-e5e5e5: #e5e5e5;
+  --black-50-f2f2f2: #f2f2f2;
+  --black-25-f9f9f9: #f9f9f9;
+  --white-ffffff: #ffffff;
+  --system-blue-007aff: #007aff;
+  --system-blue-click-0055b2: #0062cc;
+  --system-red-ff3b30: #ff3b30;
+  --system-red-800-cc2f26: #cc2f26;
+  --system-orange-ff9500: #ff8c00;
+  --system-green-26a212: #26a212;
+  --system-green-800-1b850a: #1b850a;
+
+  /* Fonts */
+  --hint-placeholder-font-family: Roboto-Regular, sans-serif;
+  --hint-placeholder-font-size: 11px;
+  --hint-placeholder-line-height: 12px;
+  --hint-placeholder-font-weight: 400;
+  --hint-placeholder-font-style: normal;
+  --placeholder-value-font-family: Roboto-Regular, sans-serif;
+  --placeholder-value-font-size: 17px;
+  --placeholder-value-line-height: 20px;
+  --placeholder-value-font-weight: 400;
+  --placeholder-value-font-style: normal;
+  --accent-button-font-family: Roboto-Medium, sans-serif;
+  --accent-button-font-size: 20px;
+  --accent-button-line-height: 24px;
+  --accent-button-font-weight: 500;
+  --accent-button-font-style: normal;
+  --button-label-font-family: Roboto-Medium, sans-serif;
+  --button-label-font-size: 17px;
+  --button-label-line-height: 20px;
+  --button-label-font-weight: 500;
+  --button-label-font-style: normal;
+  --small-button-label-font-family: Roboto-Medium, sans-serif;
+  --small-button-label-font-size: 15px;
+  --small-button-label-line-height: 20px;
+  --small-button-label-font-weight: 500;
+  --small-button-label-font-style: normal;
+  --micro-button-label-font-family: Roboto-Medium, sans-serif;
+  --micro-button-label-font-size: 13px;
+  --micro-button-label-line-height: 20px;
+  --micro-button-label-font-weight: 500;
+  --micro-button-label-font-style: normal;
+  --big-label-button-font-family: Roboto-Medium, sans-serif;
+  --big-label-button-font-size: 20px;
+  --big-label-button-line-height: 20px;
+  --big-label-button-font-weight: 500;
+  --big-label-button-font-style: normal;
+  --checkbox-font-family: SfProDisplay-Regular, sans-serif;
+  --checkbox-font-size: 14px;
+  --checkbox-line-height: 20px;
+  --checkbox-font-weight: 400;
+  --checkbox-font-style: normal;
+  --indicator-text-font-family: SfProDisplay-Bold, sans-serif;
+  --indicator-text-font-size: 9px;
+  --indicator-text-line-height: 10px;
+  --indicator-text-font-weight: 700;
+  --indicator-text-font-style: normal;
+  --title-font-family: Roboto-Medium, sans-serif;
+  --title-font-size: 24px;
+  --title-line-height: 32px;
+  --title-font-weight: 500;
+  --title-font-style: normal;
+
+  /* Effects */
+  --form-shadow-box-shadow: 0px 12px 24px 0px rgba(77, 77, 77, 0.08);
+}
