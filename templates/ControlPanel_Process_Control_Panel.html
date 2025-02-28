@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Media Cuts Studio - Process Control Panel</title>
+  <style>
+    /* =================== ESTILOS BASEADOS NA VERSÃO EM QT =================== */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111111;
+      color: #D8DEE9;
+    }
+    #app {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    header {
+      display: flex;
+      justify-content: flex-end;
+      padding: 10px;
+    }
+    .window-controls button {
+      background: none;
+      border: none;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+    .window-controls img {
+      width: 20px;
+      height: 20px;
+    }
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+    .top-bar button {
+      background-color: #4C566A;
+      border: 1px solid #434C5E;
+      color: #D8DEE9;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #time-counter {
+      font-size: 16px;
+    }
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      flex: 1;
+      padding: 10px;
+    }
+    .info-panel fieldset {
+      border: 1px solid #434C5E;
+      padding: 10px;
+    }
+    .info-panel legend {
+      padding: 0 5px;
+    }
+    .info-panel p {
+      margin: 8px 0;
+    }
+    .log-panel {
+      display: flex;
+      flex-direction: column;
+    }
+    .progress-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .progress-container label {
+      margin-right: 10px;
+    }
+    progress {
+      width: 100%;
+      height: 20px;
+    }
+    #log {
+      flex: 1;
+      background-color: #1C1C1C;
+      color: #D8DEE9;
+      border: 1px solid #434C5E;
+      border-radius: 5px;
+      padding: 10px;
+      resize: none;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <!-- Cabeçalho com botões (apenas ilustrativos em versão web) -->
+    <header>
+      <div class="window-controls">
+        <button id="minimize">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/minus.png" alt="Minimizar">
+        </button>
+        <button id="close">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/close-window.png" alt="Fechar">
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Barra superior: Botão de thread e cronômetro -->
+      <div class="top-bar">
+        <button id="thread-info">Thread:</button>
+        <div id="time-counter">00:00:00</div>
+      </div>
+
+      <!-- Área principal dividida em dois painéis -->
+      <div class="content-grid">
+        <!-- Painel de Informações -->
+        <div class="info-panel">
+          <fieldset>
+            <legend>Info:</legend>
+            <p id="mediabase">Mediabase:</p>
+            <p id="created-at">Created at:</p>
+            <p id="file-path">File path:</p>
+            <p id="target">Target:</p>
+            <p id="cuts-duration">Cuts Duration: 60s</p>
+            <p id="thread-id">Thread id:</p>
+          </fieldset>
+        </div>
+
+        <!-- Painel de Logs e Progresso -->
+        <div class="log-panel">
+          <div class="progress-container">
+            <label for="progress">Progress Create:</label>
+            <progress id="progress" value="0" max="100"></progress>
+          </div>
+          <textarea id="log" readonly></textarea>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- Incluindo socket.io (cliente) a partir do CDN -->
+  <script src="https://cdn.socket.io/4.6.1/socket.io.min.js" crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Conecta ao servidor Socket.IO (ajuste a URL se necessário)
+      const socket = io('http://localhost:300');
+
+      // Referências aos elementos da interface
+      const logEl = document.getElementById('log');
+      const progressEl = document.getElementById('progress');
+      const threadInfoButton = document.getElementById('thread-info');
+      const createdAtEl = document.getElementById('created-at');
+      const filePathEl = document.getElementById('file-path');
+      const threadIdEl = document.getElementById('thread-id');
+      const mediabaseEl = document.getElementById('mediabase');
+      const targetEl = document.getElementById('target');
+      const cutsDurationEl = document.getElementById('cuts-duration');
+      const timeCounterEl = document.getElementById('time-counter');
+
+      // Definindo a API Key (igual ao que é usado na versão em Qt)
+      const API_KEY = "apikey-content-creator";
+
+      // Eventos do Socket.IO
+      socket.on('connect', () => {
+        appendLog("✅ Conectado ao servidor #1 API Media Cuts Studio");
+      });
+
+      socket.on('disconnect', () => {
+        appendLog("❌ Desconectado do servidor Socket.IO");
+      });
+
+      // Recebe dados do evento "webhook_data" e atualiza a interface
+      socket.on('webhook_data', (data) => {
+        console.log("Dados recebidos:", data);  // para depuração
+        const userReceived = data[API_KEY];
+        if (!userReceived) return;
+
+        const msgType = userReceived.type;
+        const message = userReceived.message || "Mensagem não encontrada";
+
+        switch (msgType) {
+          case "info":
+            appendLog(message);
+            break;
+          case "progress":
+            progressEl.value = parseInt(message, 10);
+            break;
+          case "target":
+            targetEl.textContent = "Target: " + message;
+            break;
+          case "mediabase":
+            mediabaseEl.textContent = "Mediabase: " + message;
+            break;
+          case "Thread":
+            threadInfoButton.textContent = "Thread: " + message;
+            threadIdEl.textContent = "Thread id: " + message;
+            break;
+          case "Createdat":
+            createdAtEl.textContent = "Created at: " + message;
+            break;
+          default:
+            appendLog("Tipo desconhecido: " + msgType);
+        }
+      });
+
+      // Função para acrescentar mensagens na área de logs
+      function appendLog(text) {
+        logEl.value += text + "\n";
+        logEl.scrollTop = logEl.scrollHeight;
+      }
+
+      // Cronômetro (simula o QTimeEdit incrementando a cada segundo)
+      let seconds = 0;
+      function updateTimer() {
+        seconds++;
+        const hrs = Math.floor(seconds / 3600);
+        const mins = Math.floor((seconds % 3600) / 60);
+        const secs = seconds % 60;
+        timeCounterEl.textContent = 
+          (hrs < 10 ? "0" + hrs : hrs) + ":" +
+          (mins < 10 ? "0" + mins : mins) + ":" +
+          (secs < 10 ? "0" + secs : secs);
+      }
+      setInterval(updateTimer, 1000);
+
+      // Exemplo de chamada à API (similar à chamada feita na thread do Python)
+      fetch("http://127.0.0.1:5000/api/Media_Cuts_Studio/1_long_video", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-API-KEY": API_KEY
+        },
+        body: JSON.stringify({
+          chave1: "valor1",
+          chave2: "valor2"
+        })
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log("Resposta da API:", data);
+      })
+      .catch(error => {
+        console.error("Erro na API:", error);
+      });
+      
+      // (Opcional) Eventos para os botões de minimizar e fechar  
+      document.getElementById('minimize').addEventListener('click', () => {
+        alert("Função de minimizar não implementada em versão web.");
+      });
+      
+      document.getElementById('close').addEventListener('click', () => {
+        alert("Função de fechar não implementada em versão web.");
+      });
+    });
+  </script>
+</body>
+</html>
