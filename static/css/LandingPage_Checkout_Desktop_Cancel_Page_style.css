@@ -1,0 +1,164 @@
+.cancel-page-desktop,
+.cancel-page-desktop * {
+  box-sizing: border-box;
+}
+.cancel-page-desktop {
+  background: #ffffff;
+  height: 862px;
+  position: relative;
+  overflow: hidden;
+}
+.section-thank-you-page-order-status {
+  background: var(--base-background, #ffffff);
+  border-radius: 5px;
+  border-style: solid;
+  border-color: var(--base-border, #dedede);
+  border-width: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 1109px;
+  height: 88px;
+  position: absolute;
+  right: -15px;
+  top: calc(50% - 224px);
+  overflow: hidden;
+}
+.text {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.block-thank-you-page-confirmation {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.header-copy-button {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.text-header-and-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.your-order-is-confirmed {
+  color: var(--foreground-default, #000000);
+  text-align: left;
+  font-family: "ABeeZee-Regular", sans-serif;
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+.you-ll-get-a-confirmation-email-with-your-order-number-soon {
+  color: var(--base-textsubdued, #707070);
+  text-align: left;
+  font-family: "ABeeZee-Regular", sans-serif;
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+.divider {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.email-me {
+  padding: 0px 1px 1px 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 572px;
+  position: relative;
+}
+.frame-28971 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 1093px;
+  height: 188px;
+  position: absolute;
+  left: 0px;
+  top: 19px;
+}
+.success-error-icons {
+  background: var(--system-red-ff3b30, #ff3b30);
+  border-radius: 40px;
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.regular-icons {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  position: relative;
+  overflow: visible;
+}
+.payment-successfully {
+  color: var(--black-900-1a1a1a, #1a1a1a);
+  text-align: center;
+  font-family: var(--title-font-family, "Roboto-Medium", sans-serif);
+  font-size: var(--title-font-size, 24px);
+  line-height: var(--title-line-height, 32px);
+  letter-spacing: var(--title-letter-spacing, 0.3px);
+  font-weight: var(--title-font-weight, 500);
+  position: relative;
+  width: 272px;
+}
+.frame-28972 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 272px;
+  height: 32px;
+  position: absolute;
+  left: 65px;
+  top: 450px;
+}
