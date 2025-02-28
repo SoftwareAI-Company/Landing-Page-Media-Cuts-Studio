@@ -1,0 +1,929 @@
+
+.mobile-one-page-filled,
+.mobile-one-page-filled * {
+  box-sizing: border-box;
+}
+
+.mobile-one-page-filled {
+  background: var(--base-background, #ffffff);
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+.section-order-summary-mobile-start {
+  background: var(--base-backgroundsubdued, #f5f5f5);
+  border-style: solid;
+  border-color: var(--base-border, #dedede);
+  border-width: 0px 0px 1px 0px;
+  padding: 0px var(--spacing-large-200, 21px) 0px var(--spacing-large-200, 21px);
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.frame-6557 {
+  padding: var(--spacing-base, 14px) 0px var(--spacing-base, 14px) 0px;
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-small-200, 9px);
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.hide-order-summary {
+  color: var(--base-accent, #197cbd);
+  text-align: left;
+  font-family: var(
+    --body-default-base-font-family,
+    "SfProText-Regular",
+    sans-serif
+  );
+  font-size: var(--body-default-base-font-size, 14px);
+  line-height: var(--body-default-base-line-height, 150%);
+  font-weight: var(--body-default-base-font-weight, 400);
+  position: relative;
+}
+.chevron-down {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  overflow: visible;
+}
+.frame-6556 {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+}
+._103-00 {
+  color: var(--base-text, #000000);
+  text-align: right;
+  font-family: var(
+    --body-medium-bold-font-family,
+    "SfProText-Semibold",
+    sans-serif
+  );
+  font-size: var(--body-medium-bold-font-size, 16px);
+  line-height: var(--body-medium-bold-line-height, 150%);
+  font-weight: var(--body-medium-bold-font-weight, 600);
+  position: relative;
+}
+.frame-6623 {
+  padding: var(--spacing-large-200, 21px);
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 126px;
+  position: relative;
+}
+.section-contact-one-page {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.block-contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-base, 14px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.frame-6558 {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-small-400, 5px);
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.contact {
+  color: var(--base-text, #000000);
+  text-align: left;
+  font-family: var(
+    --headings-level-1-font-family,
+    "SfProDisplay-Semibold",
+    sans-serif
+  );
+  font-size: var(--headings-level-1-font-size, 21px);
+  line-height: var(--headings-level-1-line-height, 120%);
+  font-weight: var(--headings-level-1-font-weight, 600);
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.text-field {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.field {
+  background: var(--control-background, #ffffff);
+  border-radius: var(--cornerradius-base, 5px);
+  border-style: solid;
+  border-color: var(--control-border, #dedede);
+  border-width: 1px;
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.labelvalue {
+  padding: 11px 11px 0px 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  height: 52px;
+  position: relative;
+  overflow: hidden;
+}
+.email-input {
+  border: none;   
+  outline: none;           
+  background-color: transparent; 
+  color: var(--control-text, #000000);
+  text-align: left;
+  font-family: "ABeeZee-Regular", sans-serif;
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: 400;
+  position: relative;
+  flex: 1;
+  min-width: 250px; /* Define um tamanho mínimo */
+  width: 100%; /* Garante que o input ocupe o espaço disponível */
+  max-width: 400px; /* Evita que o campo fique muito grande em telas maiores */
+}
+
+
+.value {
+  color: var(--control-text, #000000);
+  text-align: left;
+  font-family: "ABeeZee-Regular", sans-serif;
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: 400;
+  position: relative;
+  flex: 1;
+}
+.divider {
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 9px;
+  position: relative;
+  overflow: visible;
+}
+.divider2 {
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 9px;
+  position: relative;
+  overflow: visible;
+}
+.section-payment-one-page {
+  padding: var(--spacing-large-200, 21px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large-300, 26px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 375px;
+  position: relative;
+}
+.block-payment-payment-method {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.block-header {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.title {
+  color: var(--base-text, #000000);
+  text-align: left;
+  font-family: var(
+    --headings-level-1-font-family,
+    "SfProDisplay-Semibold",
+    sans-serif
+  );
+  font-size: var(--headings-level-1-font-size, 21px);
+  line-height: var(--headings-level-1-line-height, 120%);
+  font-weight: var(--headings-level-1-font-weight, 600);
+  position: relative;
+  width: 333px;
+}
+.subtitle {
+  color: var(--base-textsubdued, #707070);
+  text-align: left;
+  font-family: var(
+    --body-default-base-font-family,
+    "SfProText-Regular",
+    sans-serif
+  );
+  font-size: var(--body-default-base-font-size, 14px);
+  line-height: var(--body-default-base-line-height, 150%);
+  font-weight: var(--body-default-base-font-weight, 400);
+  position: relative;
+  width: 333px;
+}
+.option-list {
+  background: var(--control-background, #ffffff);
+  border-radius: 5px;
+  border-style: solid;
+  border-color: var(--control-border, #dedede);
+  border-width: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.option {
+  cursor: pointer;
+  transition: background-color 0.3s, border 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.option-content {
+  padding: var(--spacing-base, 14px);
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-small-100, 11px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+/* Estilo padrão do radio button */
+.radio-ui2 {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ccc; /* cor da borda padrão */
+  border-radius: 50%;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Quando a opção estiver selecionada, mude a aparência do radio */
+.option.selected .radio-ui2 {
+  background-color: #007bff; /* cor de fundo indicando seleção */
+  border-color: #007bff;     /* borda com a mesma cor para destaque */
+}
+
+/* Exemplo de estilo para a opção selecionada */
+.option.selected {
+  background-color: rgba(0, 123, 255, 0.1); /* Fundo com leve destaque */
+  border: 1px solid rgba(0, 123, 255, 0.5);  /* Contorno para indicar seleção */
+}
+/* Você também pode estilizar especificamente o elemento que representa o "radio" */
+.option.selected .radio-ui2 {
+  background-color: rgba(0, 123, 255, 1); /* Preenchimento do círculo */
+}
+.control {
+  flex-shrink: 0;
+  width: 18px;
+  height: 21px;
+  position: relative;
+}
+.radio-ui {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 0px;
+  top: 1.5px;
+}
+.radio-ui2 {
+  background: var(--control-background, #ffffff);
+  border-radius: 34px;
+  border-style: solid;
+  border-color: var(--control-border, #dedede);
+  border-width: 1px;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+}
+.primary {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+}
+.text-block {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.value2 {
+  color: var(--control-text, #000000);
+  text-align: left;
+  font-family: "SfProText-Regular", sans-serif;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.0015em;
+  font-weight: 400;
+  position: relative;
+  flex: 1;
+}
+.secondary {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.optionlist-contenttypes-wallet {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+  justify-content: center;
+  flex-shrink: 0;
+  height: 21px;
+  position: relative;
+}
+.payment-logo {
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.icon-wallets-paypal {
+  flex-shrink: 0;
+  width: 62.55px;
+  height: 16px;
+  position: relative;
+  overflow: visible;
+}
+.divider3 {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.divider4 {
+  background: var(--control-border, #dedede);
+  flex: 1;
+  position: relative;
+}
+.value3 {
+  color: var(--control-text, #000000);
+  text-align: left;
+  font-family: "ABeeZee-Regular", sans-serif;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.0015em;
+  font-weight: 400;
+  position: relative;
+  flex: 1;
+}
+.optionlist-contenttypes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.inline-stack {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 21px;
+  position: relative;
+}
+.payment-method-button-40-px {
+  background: #6461fc;
+  border-radius: 6px;
+  padding: 10px 12px 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 63px;
+  height: 28px;
+  position: relative;
+}
+.other-pay-method {
+  flex-shrink: 0;
+  width: 48px;
+  height: 20px;
+  position: relative;
+}
+.rectangle-15 {
+  background: rgba(196, 196, 196, 0);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+}
+.other-pay-method-variant-8 {
+  width: 90.34%;
+  height: 90%;
+  position: absolute;
+  right: 5.49%;
+  left: 4.17%;
+  bottom: 5%;
+  top: 5%;
+  overflow: visible;
+}
+.divider5 {
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 9px;
+  position: relative;
+  overflow: visible;
+}
+.section-order-summary-mobile-end {
+  padding: var(--spacing-large-200, 21px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large-200, 21px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-small-200, 9px);
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.order-summary {
+  color: var(--base-text, #000000);
+  text-align: left;
+  font-family: var(
+    --headings-level-1-font-family,
+    "SfProDisplay-Semibold",
+    sans-serif
+  );
+  font-size: var(--headings-level-1-font-size, 21px);
+  line-height: var(--headings-level-1-line-height, 120%);
+  font-weight: var(--headings-level-1-font-weight, 600);
+  position: relative;
+  flex: 1;
+}
+.block-order-summary-items-in-cart {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-base, 14px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.resource-item {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-base, 14px);
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.start-column {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.mid-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 1;
+  position: relative;
+}
+.title-value {
+  color: var(--base-text, #000000);
+  text-align: center;
+  font-family: "ABeeZee-Regular", sans-serif;
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.description-value {
+  color: var(--base-textsubdued, #707070);
+  text-align: left;
+  font-family: "ABeeZee-Regular", sans-serif;
+  font-size: 10px;
+  line-height: 150%;
+  font-weight: 400;
+  position: relative;
+}
+.end-column {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.frame-17 {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-end;
+  justify-content: center;
+  flex-shrink: 0;
+  height: 64px;
+  position: relative;
+}
+.block-order-summary-subtotal {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.money-lines {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small-300, 7px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.subtotal {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-base, 14px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.subtotal2 {
+  color: var(--base-text, #000000);
+  text-align: left;
+  font-family: var(
+    --body-default-base-font-family,
+    "SfProText-Regular",
+    sans-serif
+  );
+  font-size: var(--body-default-base-font-size, 14px);
+  line-height: var(--body-default-base-line-height, 150%);
+  font-weight: var(--body-default-base-font-weight, 400);
+  position: relative;
+  flex: 1;
+}
+._59 {
+  color: var(--base-text, #000000);
+  text-align: right;
+  font-family: var(
+    --body-default-base-font-family,
+    "SfProText-Regular",
+    sans-serif
+  );
+  font-size: var(--body-default-base-font-size, 14px);
+  line-height: var(--body-default-base-line-height, 150%);
+  font-weight: var(--body-default-base-font-weight, 400);
+  position: relative;
+}
+.taxes {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-base, 14px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.frame-8 {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-small-300, 7px);
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+}
+.taxes2 {
+  color: var(--base-text, #000000);
+  text-align: left;
+  font-family: var(
+    --body-default-base-font-family,
+    "SfProText-Regular",
+    sans-serif
+  );
+  font-size: var(--body-default-base-font-size, 14px);
+  line-height: var(--body-default-base-line-height, 150%);
+  font-weight: var(--body-default-base-font-weight, 400);
+  position: relative;
+}
+.question {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  position: relative;
+  overflow: visible;
+}
+._5 {
+  color: var(--base-text, #000000);
+  text-align: right;
+  font-family: "ABeeZee-Regular", sans-serif;
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: 400;
+  position: relative;
+}
+.money-total {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-base, 14px);
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.total {
+  color: var(--base-text, #000000);
+  text-align: left;
+  font-family: var(
+    --body-large-bold-font-family,
+    "SfProText-Semibold",
+    sans-serif
+  );
+  font-size: var(--body-large-bold-font-size, 19px);
+  line-height: var(--body-large-bold-line-height, 150%);
+  font-weight: var(--body-large-bold-font-weight, 600);
+  position: relative;
+  flex: 1;
+}
+.frame-6 {
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+._69 {
+  color: var(--base-text, #000000);
+  text-align: right;
+  font-family: var(
+    --body-extra-large-bold-font-family,
+    "SfProText-Semibold",
+    sans-serif
+  );
+  font-size: var(--body-extra-large-bold-font-size, 21px);
+  line-height: var(--body-extra-large-bold-line-height, 150%);
+  font-weight: var(--body-extra-large-bold-font-weight, 600);
+  position: relative;
+}
+.vat {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-base, 14px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.vat-content {
+  color: var(--base-textsubdued, #707070);
+  text-align: left;
+  font-family: "ABeeZee-Regular", sans-serif;
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: 400;
+  position: relative;
+  flex: 1;
+}
+.block-pay-now {
+  cursor: pointer; /* Define o cursor como de clique */
+  user-select: none; /* Impede a seleção do texto dentro do elemento */
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.button {
+  background: var(--primarybutton-background, #1773b0);
+  border-radius: var(--cornerradius-base, 5px);
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 56px;
+  position: relative;
+  overflow: hidden;
+}
+.wrapper {
+  padding: 0px var(--spacing-large-200, 21px) 0px var(--spacing-large-200, 21px);
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-small-300, 7px);
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  height: 52px;
+  position: relative;
+}
+.label {
+  color: var(--primarybutton-text, #ffffff);
+  text-align: center;
+  font-family: "SfProText-Semibold", sans-serif;
+  font-size: 19px;
+  line-height: 100%;
+  font-weight: 600;
+  position: relative;
+}
+.frame-6622 {
+  border-style: solid;
+  border-color: var(--base-border, #dedede);
+  border-width: 1px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.section-footer {
+  border-style: solid;
+  border-color: var(--base-border, #dedede);
+  border-width: 1px 0px 0px 0px;
+  padding: var(--spacing-large-200, 21px);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.links {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-base, 14px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.link {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.back-to-cart {
+  color: var(--base-accent, #197cbd);
+  text-align: left;
+  font-family: "SfProText-Regular", sans-serif;
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: 400;
+  text-decoration: underline;
+  position: relative;
+}
