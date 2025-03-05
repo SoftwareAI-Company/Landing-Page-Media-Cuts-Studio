@@ -1,0 +1,10 @@
+2025/03/01 12:32:13 [error] 23848#24164: *1 CreateFile() "C:\nginx/html/favicon.ico" failed (2: O sistema não pode encontrar o arquivo especificado), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2025/03/01 12:34:44 [error] 1036#22436: *1 connect() failed (10061: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente) while connecting to upstream, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:800/", host: "localhost"
+2025/03/04 19:31:05 [error] 1036#22436: *84 connect() failed (10061: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente) while connecting to upstream, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:800/", host: "localhost"
+2025/03/04 19:39:49 [error] 1036#22436: *89 connect() failed (10061: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente) while connecting to upstream, client: 192.168.2.13, server: localhost, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:800/", host: "medicutsstudio.com"
+2025/03/04 19:58:23 [notice] 27844#23396: signal process started
+2025/03/04 20:30:23 [notice] 18076#29264: signal process started
+2025/03/04 20:33:16 [emerg] 17480#21776: unknown directive "ssl" in C:\nginx/conf/nginx.conf:42
+2025/03/04 20:33:27 [notice] 14000#19936: signal process started
+2025/03/04 20:33:46 [notice] 29980#19752: signal process started
+2025/03/04 20:37:50 [notice] 25928#28140: signal process started
