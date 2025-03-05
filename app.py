@@ -3,7 +3,7 @@ from user_agents import parse
 from flask import Flask, render_template, request, redirect, url_for, session
 from datetime import timedelta
 from functools import wraps
-
+from waitress import serve
 
 app = Flask(__name__)
 CORS(app)  
@@ -74,6 +74,6 @@ def checkout_cancel():
 
 
 
+# if __name__ == '__main__':
+#     serve(app, host="0.0.0.0", port=800)
 
-if __name__ == '__main__':
-    app.run(debug=True, port=800)
