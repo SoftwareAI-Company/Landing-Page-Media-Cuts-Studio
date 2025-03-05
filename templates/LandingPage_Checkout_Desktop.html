@@ -1,18 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="stylesheet" href="{{ static_url }}css/LandingPage_Checkout_Desktop_style.css">
   <link rel="stylesheet" href="{{ static_url }}css/LandingPage_Checkout_Mobile_style.css">
   <script src="https://js.stripe.com/v3/"></script>
   <title>Site - Checkout Desktop</title>
 </head>
 <body>
-
-
 
   <div class="desktop">
     <div class="checkout-form">
@@ -26,8 +22,7 @@
               <div class="field">
                 <div class="labelvalue">
                   <div class="value-container">
-                    <!-- Substitua a div por um input do tipo email -->
-                    <input type="email" class="email-input" placeholder="Enter your email">
+                    <input type="email" class="email-input" placeholder="Enter your email" required aria-label="Email" />
                   </div>
                 </div>
               </div>
@@ -37,9 +32,7 @@
             <div class="block-payment-payment-method">
               <div class="block-header">
                 <div class="title">Payment</div>
-                <div class="subtitle">
-                  All transactions are secure and encrypted
-                </div>
+                <div class="subtitle">All transactions are secure and encrypted</div>
               </div>
               <div class="option-list">
                 <div class="option">
@@ -61,10 +54,7 @@
                             <div class="payment-method-button-40-px">
                               <div class="other-pay-method">
                                 <div class="rectangle-15"></div>
-                                <img
-                                  class="other-pay-method-variant-8"
-                                  src="{{ static_url }}img/other-pay-method-variant-80.svg"
-                                />
+                                <img class="other-pay-method-variant-8" src="{{ static_url }}img/other-pay-method-variant-80.svg" alt="Método de pagamento" />
                               </div>
                             </div>
                           </div>
@@ -100,7 +90,7 @@
                   <div class="taxes">
                     <div class="frame-8">
                       <div class="taxes2">Estimated taxes</div>
-                      <img class="question" src="{{ static_url }}img/question0.svg" />
+                      <img class="question" src="{{ static_url }}img/question0.svg" alt="Questão" />
                     </div>
                     <div class="_5">$0.00</div>
                   </div>
@@ -127,36 +117,16 @@
         </div>
         <div class="section-footer">
           <div class="links">
-            <div class="link">
-              <div class="back-to-cart">Return policy</div>
-            </div>
-            <div class="link">
-              <div class="back-to-cart">Privacy policy</div>
-            </div>
-            <div class="link">
-              <div class="back-to-cart">Terms of service</div>
-            </div>
+            <div class="link"><div class="back-to-cart">Return policy</div></div>
+            <div class="link"><div class="back-to-cart">Privacy policy</div></div>
+            <div class="link"><div class="back-to-cart">Terms of service</div></div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
-  
-  
-  
-<script src="{{ static_url }}js/checkout-payment-button.js"></script>
-<script src="{{ static_url }}js/checkout-payment-selected.js"></script>
-<script src="{{ static_url }}js/checkout-query-prices.js"></script>
-
-
+  <script src="{{ static_url }}js/checkout-payment-button.js"></script>
+  <script src="{{ static_url }}js/checkout-payment-selected.js"></script>
+  <script src="{{ static_url }}js/checkout-query-prices.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
