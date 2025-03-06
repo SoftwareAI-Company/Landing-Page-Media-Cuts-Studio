@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="{{ static_url }}css/LandingPage_Checkout_Desktop_style.css">
+  <link rel="stylesheet" href="{{ static_url }}css/LandingPage_Checkout_Mobile_style.css">
+  <script src="https://js.stripe.com/v3/"></script>
+  <title>Site - Checkout Desktop</title>
+</head>
+<body>
+
+
+
+  <div class="desktop">
+    <div class="checkout-form">
+      <div class="content-wrapper">
+        <div class="section-contact-one-page">
+          <div class="block-contact">
+            <div class="frame-6558">
+              <div class="contact">Contact</div>
+            </div>
+            <div class="text-field">
+              <div class="field">
+                <div class="labelvalue">
+                  <div class="value-container">
+                    <input type="email" class="email-input" placeholder="Enter your email">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-payment-one-page">
+            <div class="block-payment-payment-method">
+              <div class="block-header">
+                <div class="title">Payment</div>
+                <div class="subtitle">
+                  All transactions are secure and encrypted
+                </div>
+              </div>
+              <div class="option-list">
+                <div class="option">
+                  <div class="option-content">
+                    <div class="control">
+                      <div class="radio-ui">
+                        <div class="radio-ui2"></div>
+                      </div>
+                    </div>
+                    <div class="content">
+                      <div class="primary">
+                        <div class="text-block">
+                          <div class="value2">Stripe</div>
+                        </div>
+                      </div>
+                      <div class="secondary">
+                        <div class="optionlist-contenttypes-wallet">
+                          <div class="container">
+                            <div class="payment-method-button-40-px">
+                              <div class="other-pay-method">
+                                <div class="rectangle-15"></div>
+                                <img
+                                  class="other-pay-method-variant-8"
+                                  src="{{ static_url }}img/other-pay-method-variant-80.svg"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="divider">
+                    <div class="divider2"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section-order-summary-desktop">
+              <div class="block-order-summary-items-in-cart">
+                <div class="resource-item">
+                  <div class="mid-column">
+                    <div class="title-value">Media Cuts Studio</div>
+                  </div>
+                  <div class="end-column">
+                    <div class="frame-17">
+                      <div class="discounted-price">$39.00</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-order-summary-subtotal">
+                <div class="money-lines">
+                  <div class="subtotal">
+                    <div class="subtotal2">Subtotal</div>
+                    <div class="_59">$157.00</div>
+                  </div>
+                  <div class="taxes">
+                    <div class="frame-8">
+                      <div class="taxes2">Estimated taxes</div>
+                      <img class="question" src="{{ static_url }}img/question0.svg" />
+                    </div>
+                    <div class="_5">$0.00</div>
+                  </div>
+                  <div class="money-total">
+                    <div class="total">Total</div>
+                    <div class="frame-6">
+                      <div class="_69">$162.00</div>
+                    </div>
+                  </div>
+                  <div class="vat">
+                    <div class="vat-content">Including $0.00 in taxes</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="block-pay-now">
+          <div class="button">
+            <div class="wrapper">
+              <div class="label">Pay now</div>
+            </div>
+          </div>
+        </div>
+        <div class="section-footer">
+          <div class="links">
+            <div class="link">
+              <div class="back-to-cart">Return policy</div>
+            </div>
+            <div class="link">
+              <div class="back-to-cart">Privacy policy</div>
+            </div>
+            <div class="link">
+              <div class="back-to-cart">Terms of service</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+<script src="{{ static_url }}js/checkout-payment-button.js"></script>
+<script src="{{ static_url }}js/checkout-payment-selected.js"></script>
+<script src="{{ static_url }}js/checkout-query-prices.js"></script>
+
+
+</body>
+</html>
+
