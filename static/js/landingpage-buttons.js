@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   // Botão do plano Studio
-  const studioBtn = document.querySelector('.start-studio');
+  const studioBtn = document.querySelector('.become-a-studio');
   if (studioBtn) {
     studioBtn.addEventListener("click", function() {
       const studioPrice = 139;
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   
   // Botão do plano Startup
-  const startupBtn = document.querySelector('.start-for-free');
+  const startupBtn = document.querySelector('.join-new-startup');
   if (startupBtn) {
     startupBtn.addEventListener("click", function() {
       const startupPrice = 0;
