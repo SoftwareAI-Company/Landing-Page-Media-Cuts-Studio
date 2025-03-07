@@ -2,6 +2,7 @@
 .desktop * {
   box-sizing: border-box;
 }
+
 .desktop {
   padding: 5px 0px 0px 0px;
   display: flex;

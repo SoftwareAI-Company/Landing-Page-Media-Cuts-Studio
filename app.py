@@ -27,11 +27,23 @@ def index():
     ua_string = request.headers.get('User-Agent')
     user_agent = parse(ua_string)
     if user_agent.is_tablet:
-        return render_template('LandingPage_Tablet.html')
+        return render_template('Tablet.html')
     elif user_agent.is_mobile:
-        return render_template('LandingPage_Mobile.html')
+        return render_template('Mobile.html')
     else:
-        return render_template('LandingPage_Desktop.html')
+        return render_template('Desktop.html')
+
+@app.route('/mobile')
+def LandingPage_Mobile():
+    return render_template('Mobile.html')
+
+@app.route('/desktop')
+def LandingPage_Desktop():
+    return render_template('Desktop.html')
+
+@app.route('/tablet')
+def LandingPage_tablet():
+    return render_template('Tablet.html')
 
 @app.route('/plan/content-creator/checkout')
 def plan_contentcreator_checkout():
@@ -70,10 +82,10 @@ def checkout_cancel():
         return render_template('LandingPage_Checkout_Mobile_Cancel_Page.html')
 
 
-
-
-
-
 # if __name__ == '__main__':
-#     serve(app, host="0.0.0.0", port=800)
+#     serve(app, host="0.0.0.0", port=801)
+
+
+if __name__ == '__main__':
+    app.run(debug=True, host="0.0.0.0", port=801)
 
