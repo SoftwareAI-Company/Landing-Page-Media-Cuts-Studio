@@ -1,0 +1,25 @@
+DockerWork/
+save/
+Redis/
+RDP/
+Landingpage/
+Studio/WorkEnvironment/Process/
+# Exclua arquivos compilados e caches
+__pycache__/
+*.pyc
+reparar.txt
+savedocker.txt
+Studio/return_prod.txt
+
+
+save/
+Build/
+keys.env
+run-git-commit.py
+run-build-release.py
+
+
+
+
+
+
