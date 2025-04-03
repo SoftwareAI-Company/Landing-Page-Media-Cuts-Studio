@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+
+  landingpage1:
+    build: .
+    container_name: landingpage1
+    restart: always
+    ports:
+      - "801:801"
+    volumes:
+      - .:/app
+    working_dir: /app
+    environment:
+      - FLASK_ENV=development  # Ativa modo desenvolvimento (Hot Reload)
+      - FLASK_APP=landingpage:app  # Define a aplicação Flask
+    command: ["flask", "run", "--host=0.0.0.0", "--port=801"]
+    mem_limit: 500MB
+    cpus: "1.5"
+    networks:
+      - rede_externa
+
+networks:
+  rede_externa:
+    external: true
