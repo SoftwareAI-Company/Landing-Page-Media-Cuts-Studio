@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
             return; 
           }
 
-          fetch("https://pure-poorly-fly.ngrok-free.app/proxy-checkout", {
+          fetch("https://landing.mediacutsstudio.com/proxy-checkout", {
             method: "POST",
             headers: {
               "Content-Type": "application/json"
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
               const stripe = Stripe("pk_test_51QpX90Cvm2cRLHtdoF7n2Ea4sRRjYBx8Csiii0e6M6ECTJJ8fKaQ1DKpJApfJZH5hIkWRojaMmaxY9sEcS50tspB00DF2IA12h");
               stripe.redirectToCheckout({ sessionId: data.sessionId })
               .then(() => {
-                window.location.href = "https://9b8f8a9c-586c-4bc4-8338-2d1a33f8235f-00-2gvd4cn9hpni2.picard.replit.dev/checkout/sucess"; 
+                window.location.href = "https://mediacutsstudio.com/checkout/sucess"; 
               });
             } else {
               alert("Erro ao criar a sessão de pagamento.");
