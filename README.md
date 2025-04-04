@@ -1,9 +1,16 @@
-# Landing-Page-Media-Cuts-Studio
-This repository is the flask, html, css and js landing page for Saas Media Cuts Studio, a video editing application that aims to be an AI-governed studio, the repository also shows the work of AI software agents in an application in production
+
+# Last Release 
+[X] (Adicionar nova imagem da área de inicialização do shortify #36)[https://github.com/SoftwareAI-Company/Landing-Page-Media-Cuts-Studio/issues/36]
+[X] (Adicionar nova imagem para área de controle de tarefas #35)[https://github.com/SoftwareAI-Company/Landing-Page-Media-Cuts-Studio/issues/35]
+[X] (Adicionar o upload de videos para a conta tiktok #34)[https://github.com/SoftwareAI-Company/Landing-Page-Media-Cuts-Studio/issues/34]
+[X] (Adicionar a adiçao para contas tiktok #33)[https://github.com/SoftwareAI-Company/Landing-Page-Media-Cuts-Studio/issues/33]
+[X] (Mudança de plano de assinatura #32)[https://github.com/SoftwareAI-Company/Landing-Page-Media-Cuts-Studio/issues/32]
+[X] (Adicionar as plataformas suportadas pelo app #29)[https://github.com/SoftwareAI-Company/Landing-Page-Media-Cuts-Studio/issues/29]
 
 
+#
 
-# Release Build_v0.0.1-alpha
+# Release 
 #### Colunas de seleção de planos
 - [X] novo template da landinpage
 #### Colunas de apresentação de partes do software
